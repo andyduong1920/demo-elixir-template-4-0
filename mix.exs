@@ -53,7 +53,6 @@ defmodule SampleProject.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:mimic, "~> 1.5.1", [only: :test]},
-      {:nimble_template, path: "../", only: :dev, runtime: false},
       {:oban, "~> 2.11.2"},
       {:phoenix, "~> 1.6.6"},
       {:phoenix_ecto, "~> 4.4"},
