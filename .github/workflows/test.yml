@@ -323,7 +323,7 @@ jobs:
 
     strategy:
       matrix:
-        mix_test_partition: [1, 2, 3, 4]
+        mix_test_partition: [1]
 
     steps:
       - name: Checkout repository
@@ -379,7 +379,7 @@ jobs:
         run: mix ecto.migrate
 
       - name: Run Tests
-        run: mix test --only feature_test --partitions 4
+        run: mix test --only feature_test --partitions 1
         env:
           MIX_TEST_PARTITION: ${{ matrix.mix_test_partition }}
 
