@@ -83,7 +83,7 @@ defmodule SampleProject.MixProject do
       "gettext.extract-and-merge": ["gettext.extract --merge --no-fuzzy"],
       "gettext.check": [
         "gettext.extract-and-merge",
-        ~S/cmd git diff --no-ext-diff --quiet priv\/gettext || echo "The localization files POs, POTs are NOT up-to-date." && exit 1/
+        ~S/cmd git diff --no-ext-diff --quiet priv\/gettext || echo "The localization files \(POs, POTs\) are NOT up-to-date, run \'mix codebase.fix\' to fix" && exit 1/
       ],
       "ecto.migrate_all": [
         "ecto.migrate --migrations-path=priv/repo/migrations --migrations-path=priv/repo/data_migrations"
