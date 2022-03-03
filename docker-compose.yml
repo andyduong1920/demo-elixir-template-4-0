@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  build:
+    build:
+      context: .
+      cache_from:
+        - sample_project-build
+      target: build
+    image: sample_project-build
+
+  app:
+    build:
+      context: .
+      cache_from:
+        - sample_project-build
+        - sample_project
+      target: app
+    image: sample_project
